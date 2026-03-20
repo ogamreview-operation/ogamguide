@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "Bash(python:*)",
+      "Bash(where python:*)",
+      "Bash(powershell -Command \"\n[Console]::OutputEncoding = [System.Text.Encoding]::UTF8\n\\\\$excel = New-Object -ComObject Excel.Application\n\\\\$excel.Visible = \\\\$false\n\\\\$wb = \\\\$excel.Workbooks.Open\\('C:\\\\Users\\\\lenachoi\\\\Desktop\\\\광고페이지\\\\오감리뷰 광고 가이드라인.xlsx'\\)\nforeach \\(\\\\$sheet in \\\\$wb.Sheets\\) {\n    Write-Host '=== Sheet: ' + \\\\$sheet.Name + ' ==='\n    \\\\$usedRange = \\\\$sheet.UsedRange\n    for \\(\\\\$r = 1; \\\\$r -le [Math]::Min\\(\\\\$usedRange.Rows.Count, 60\\); \\\\$r++\\) {\n        \\\\$rowData = @\\(\\)\n        for \\(\\\\$c = 1; \\\\$c -le [Math]::Min\\(\\\\$usedRange.Columns.Count, 5\\); \\\\$c++\\) {\n            \\\\$val = \\\\$usedRange.Cells\\(\\\\$r, \\\\$c\\).Text\n            if \\(\\\\$val -ne ''\\) { \\\\$rowData += \\\\$val }\n        }\n        if \\(\\\\$rowData.Count -gt 0\\) { Write-Host \\(\\\\$rowData -join ' | '\\) }\n    }\n}\n\\\\$wb.Close\\(\\\\$false\\)\n\\\\$excel.Quit\\(\\)\n\" 2>&1 | iconv -f cp949 -t utf-8 2>/dev/null || powershell -Command \"[Console]::OutputEncoding = [System.Text.Encoding]::UTF8; \\\\$excel = New-Object -ComObject Excel.Application; \\\\$excel.Visible = \\\\$false; \\\\$wb = \\\\$excel.Workbooks.Open\\('C:\\\\Users\\\\lenachoi\\\\Desktop\\\\광고페이지\\\\오감리뷰 광고 가이드라인.xlsx'\\); foreach \\(\\\\$sheet in \\\\$wb.Sheets\\) { Write-Host \\('=== ' + \\\\$sheet.Name + ' ==='\\) }; \\\\$wb.Close\\(\\\\$false\\); \\\\$excel.Quit\\(\\)\")",
+      "Bash(pip show:*)",
+      "Bash(where python3:*)",
+      "Bash(where py:*)",
+      "Bash(py --version)",
+      "Bash(/c/Users/lenachoi/AppData/Local/Microsoft/WindowsApps/python.exe --version 2>&1)",
+      "Bash(ls /c/Python*)",
+      "Read(//c/Users/lenachoi/AppData/Local/Programs/**)",
+      "Read(//c/ProgramData/Miniconda3/**)",
+      "Read(//c/ProgramData/anaconda3/**)",
+      "Bash(node -e \":*)",
+      "Bash(npm install:*)",
+      "Bash(start:*)",
+      "Bash(node:*)",
+      "Bash(find C:UserslenachoiDesktop광고페이지 -name 로고* -o -name *심볼* -o -name *헤더*)",
+      "Bash(gh auth:*)",
+      "Bash(git --version)",
+      "Bash(git config:*)"
+    ]
+  }
+}

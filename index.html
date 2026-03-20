@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>오감리뷰 광고 가이드라인</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header class="header">
+  <button class="mobile-menu-btn" id="menuBtn" aria-label="메뉴">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path d="M3 12h18M3 6h18M3 18h18"/>
+    </svg>
+  </button>
+
+  <a class="header-logo" href="#" onclick="showSection('home'); return false;">
+    <img src="로고 심볼/Ohouse-Logo-Symbol-RGB/로고 심볼 헤더 변경.png"
+         alt="오늘의집" class="ohouse-logo-img" />
+  </a>
+
+  <div class="header-divider"></div>
+  <span class="header-subtitle">오감리뷰 가이드라인</span>
+
+  <div class="search-wrap">
+    <svg class="search-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+    </svg>
+    <input class="search-input" id="searchInput" type="text" placeholder="검색어를 입력하세요..." />
+    <div class="search-results" id="searchResults"></div>
+  </div>
+
+  <div class="header-right">
+    <span class="header-updated">최종 업데이트: 2026.03.19</span>
+    <a class="header-apply" href="https://orora.ohou.se/signin?redirectUrl=%2F" target="_blank">
+      오감리뷰 신청
+    </a>
+    <a class="header-contact" href="https://pf.kakao.com/_xgxfnNG" target="_blank">
+      <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 3C6.477 3 2 6.477 2 10.5c0 2.697 1.605 5.056 4 6.44V21l3.5-2.5c.81.13 1.64.2 2.5.2 5.523 0 10-3.477 10-7.7S17.523 3 12 3z"/></svg>
+      문의하기
+    </a>
+  </div>
+</header>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- ═══ LAYOUT ═══ -->
+<div class="layout">
+
+  <!-- ─── SIDEBAR ─── -->
+  <nav class="sidebar" id="sidebar">
+
+    <div class="nav-group">
+      <div class="nav-group-label">시작하기</div>
+      <button class="nav-item" data-section="home">
+        <svg class="nav-item-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        홈
+      </button>
+      <button class="nav-item" data-section="admin-guide">
+        <svg class="nav-item-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        어드민 활용 가이드
+      </button>
+    </div>
+
+    <div class="nav-divider"></div>
+
+    <div class="nav-group">
+      <div class="nav-group-label">광고 상품</div>
+      <button class="nav-item" data-section="pro">
+        <svg class="nav-item-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        PRO 상품 소개
+      </button>
+      <button class="nav-item" data-section="addon">
+        <svg class="nav-item-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+        PRO 부가광고상품
+      </button>
+      <button class="nav-item" data-section="rookie">
+        <svg class="nav-item-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+        ROOKIE 상품 소개
+      </button>
+    </div>
+
+    <div class="nav-divider"></div>
+
+    <div class="nav-group">
+      <div class="nav-group-label">운영 가이드</div>
+      <button class="nav-item" data-section="process">
+        <svg class="nav-item-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        진행 프로세스
+      </button>
+      <button class="nav-item" data-section="examples">
+        <svg class="nav-item-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        콘텐츠 예시
+      </button>
+      <button class="nav-item" data-section="license">
+        <svg class="nav-item-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        2차 라이선스 활용
+      </button>
+      <button class="nav-item" data-section="faq">
+        <svg class="nav-item-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9.5 9.5a2.5 2.5 0 0 1 4.9.8c0 1.7-2.4 2.2-2.4 2.2V14"/><circle cx="12" cy="17" r=".5" fill="currentColor"/></svg>
+        FAQ
+      </button>
+    </div>
+
+    <div class="sidebar-bottom">
+      <a href="https://ohou.se/" target="_blank">
+        <img src="Ohouse-Logo-KR-RGB/Ohouse-Logo-Horizontal-KR-RGB/Ohouse-Logo-Horizontal-KR-RGB-Color.png"
+             alt="오늘의집" class="sidebar-bottom-logo" />
+      </a>
+    </div>
+  </nav>
+
+  <!-- ─── MAIN ─── -->
+  <main class="main">
+
+    <!-- ══ HOME ══ -->
+    <section class="section active" id="home">
+      <div class="page-badge">오늘의집</div>
+      <h1 class="page-title">오감리뷰 가이드라인</h1>
+      <p class="page-desc">오늘의집 오감리뷰 광고 서비스에 대한 모든 정보를 한 곳에서 확인하세요.<br> PRO·ROOKIE 상품부터 진행 프로세스, FAQ까지 빠르게 찾아볼 수 있습니다.</p>
+
+      <div class="cards-grid">
+        <div class="card" style="cursor:pointer" onclick="showSection('pro')">
+          <div class="card-icon">⭐</div>
+          <div class="card-title">PRO 상품 소개</div>
+          <div class="card-desc">Top 크리에이터와 함께하는 <br>고퀄리티 리뷰 콘텐츠 생산 프로그램</div>
+        </div>
+        <div class="card" style="cursor:pointer" onclick="showSection('rookie')">
+          <div class="card-icon">🌱</div>
+          <div class="card-title">ROOKIE 상품 소개</div>
+          <div class="card-desc">실사용 기반 리뷰로 구매 전환율을 <br>높이는 가성비 프로그램</div>
+        </div>
+        <div class="card" style="cursor:pointer" onclick="showSection('addon')">
+          <div class="card-icon">📢</div>
+          <div class="card-title">PRO 부가광고상품</div>
+          <div class="card-desc">인스타그램 피드 · 인앱 콘텐츠 · <br>OGAM LIST 노출 상품</div>
+        </div>
+        <div class="card" style="cursor:pointer" onclick="showSection('process')">
+          <div class="card-icon">📋</div>
+          <div class="card-title">진행 프로세스</div>
+          <div class="card-desc">신청부터 콘텐츠 발행까지, <br>전체 일정 및 단계 안내</div>
+        </div>
+        <div class="card" style="cursor:pointer" onclick="showSection('examples')">
+          <div class="card-icon">🖼️</div>
+          <div class="card-title">콘텐츠 예시</div>
+          <div class="card-desc">PRO·ROOKIE 카테고리별 <br>실제 콘텐츠 예시 모음</div>
+        </div>
+        <div class="card" style="cursor:pointer" onclick="showSection('faq')">
+          <div class="card-icon">💬</div>
+          <div class="card-title">FAQ</div>
+          <div class="card-desc">자주 묻는 질문 — 광고 안내, <br>체험단 신청, 라이선스 활용</div>
+        </div>
+        <div class="card" style="cursor:pointer" onclick="showSection('license')">
+          <div class="card-icon">📋</div>
+          <div class="card-title">2차 라이선스 활용</div>
+          <div class="card-desc">리뷰 콘텐츠 이미지 2차 활용 <br>신청 방법 및 정책 안내</div>
+        </div>
+      </div>
+
+      <h2 class="section-title">🔎 오감리뷰 자세히 알아보기</h2>
+      <a class="link-card" href="https://drive.google.com/file/d/1mF7TbjvJ7rUKxm9w1GS7C-_pSXye83YL/view" target="_blank">
+        <div class="link-card-icon">📄</div>
+        <div class="link-card-body">
+          <div class="link-card-title">오감리뷰 광고 소개서</div>
+          <div class="link-card-desc">서비스 전체 소개 PDF 바로 보기</div>
+        </div>
+        <svg class="link-card-arrow" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+      <a class="link-card" href="https://drive.google.com/file/d/15Ay5nNYj04l7OsXy94o7hOM76N_91dzm/view" target="_blank">
+        <div class="link-card-icon">🖥️</div>
+        <div class="link-card-body">
+          <div class="link-card-title">오로라 어드민 활용 가이드</div>
+          <div class="link-card-desc">오감리뷰 어드민 등록·활용 방법 PDF</div>
+        </div>
+        <svg class="link-card-arrow" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+      <a class="link-card" href="https://orora.ohou.se/signin?redirectUrl=%2F" target="_blank">
+        <div class="link-card-icon">🏠</div>
+        <div class="link-card-body">
+          <div class="link-card-title">오늘의집 오로라 어드민</div>
+          <div class="link-card-desc">오감리뷰 체험단 신청 및 관리 페이지</div>
+        </div>
+        <svg class="link-card-arrow" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+
+      <h2 class="section-title">문의 채널 안내</h2>
+      <div class="contact-channels">
+        <div class="contact-channel-card">
+          <div class="contact-channel-icon">✉️</div>
+          <div class="contact-channel-body">
+            <div class="contact-channel-label">대표 메일</div>
+            <div class="contact-channel-value-row">
+              <a href="mailto:ogam_review@bucketplace.net" class="contact-channel-value" style="font-size:12px;">ogam_review@bucketplace.net</a>
+              <button class="copy-btn" data-copy="ogam_review@bucketplace.net" title="복사">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </div>
+            <div class="contact-channel-desc">광고 계약, 일정 및 진행 프로세스, <br>정산 관련 공지 및 안내</div>
+          </div>
+        </div>
+        <div class="contact-channel-card">
+          <div class="contact-channel-icon">💬</div>
+          <div class="contact-channel-body">
+            <div class="contact-channel-label">카카오톡 채널</div>
+            <div class="contact-channel-value-row">
+              <a href="https://pf.kakao.com/_xgxfnNG" target="_blank" class="contact-channel-value">오감리뷰 카카오톡 채널</a>
+              <button class="copy-btn" data-copy="https://pf.kakao.com/_xgxfnNG" title="링크 복사">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </div>
+            <div class="contact-channel-desc">광고 진행 후 파트너사 실무 관련 문의 실시간 대응 가능</div>
+          </div>
+        </div>
+        <div class="contact-channel-card">
+          <div class="contact-channel-icon">📞</div>
+          <div class="contact-channel-body">
+            <div class="contact-channel-label">오늘의집 고객센터</div>
+            <div class="contact-channel-value-row">
+              <div class="contact-channel-value">1670-0876</div>
+              <button class="copy-btn" data-copy="1670-0876" title="번호 복사">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+            </div>
+            <div class="contact-channel-desc">이메일: <a href="mailto:cs@bucketplace.net">cs@bucketplace.net</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box box-warning" style="margin-top:8px">
+        <span class="box-icon">⚠️</span>
+        <div class="box-content">
+          <div class="box-title">오로라 어드민 고객센터 문의 응대 필수</div>
+          오감리뷰 측으로 인입된 크리에이터 문의로 인해 파트너사와의 확인이 필요한 경우,
+          '고객센터 문의' 게시판을 통해 문의가 전달됩니다.
+          또한 해당 내용을 신속하게 확인하고 대응하기 위해 오늘의집 고객센터에서 담당자님께
+          직접 연락을 드릴 수 있습니다.
+          고객 문의 처리 지연을 방지할 수 있도록 고객센터 연락에 반드시 응대해 주시기 바랍니다.
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ ADMIN GUIDE ══ -->
+    <section class="section" id="admin-guide">
+      <div class="page-badge">어드민 가이드</div>
+      <h1 class="page-title">오감리뷰 어드민 활용 가이드</h1>
+      <p class="page-desc">오로라 어드민에서 오감리뷰 체험단을 등록하고 관리하는 방법을 안내합니다.</p>
+
+      <a class="orora-btn" href="https://orora.ohou.se/signin?redirectUrl=%2F" target="_blank">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        오늘의집 오로라 어드민 바로가기
+      </a>
+
+      <a class="link-card" href="https://drive.google.com/file/d/15Ay5nNYj04l7OsXy94o7hOM76N_91dzm/view" target="_blank" style="padding:28px 28px;margin-top:20px;">
+        <div class="link-card-icon" style="width:56px;height:56px;font-size:28px;border-radius:14px;">🖥️</div>
+        <div class="link-card-body">
+          <div class="link-card-title" style="font-size:16px;">어드민 활용 가이드 PDF 열기</div>
+          <div class="link-card-desc" style="margin-top:6px;">구글 드라이브에서 PDF 문서 바로 보기 · 다운로드</div>
+        </div>
+        <svg class="link-card-arrow" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+
+      <h2 class="section-title">어드민 접속 방법</h2>
+      <div class="box box-info">
+        <span class="box-icon">📍</span>
+        <div class="box-content">
+          <a href="https://orora.ohou.se/signin?redirectUrl=%2F" target="_blank" style="color:inherit;font-weight:700;text-decoration:underline;">오로라</a> 로그인
+          → 좌측 <strong>'광고관리'</strong>
+          → <strong>오감리뷰 체험단</strong> 접속
+        </div>
+      </div>
+
+      <h2 class="section-title">대행사 관리 계정 추가 방법</h2>
+      <p>대행사에서 진행하는 경우 브랜드사로부터 <a href="https://orora.ohou.se/signin?redirectUrl=%2F" target="_blank" style="color:var(--brand);font-weight:600;text-decoration:underline;">오로라</a> 관리 계정을 부여받아 진행할 수 있습니다.</p>
+      <div class="box box-success">
+        <span class="box-icon">📍</span>
+        <div class="box-content">
+          <a href="https://orora.ohou.se/signin?redirectUrl=%2F" target="_blank" style="color:inherit;font-weight:700;text-decoration:underline;">오로라</a>에서
+          셀러샵(브랜드사) <strong>'대표 계정'</strong>으로 로그인 → 좌측 메뉴 <strong>[판매자 정보 &gt; 계정 정보]</strong> 내 관리 계정 탭 이동<br>
+          → <strong>[추가 계정 만들기]</strong> 버튼으로 관리 계정 생성
+        </div>
+      </div>
+
+      <h2 class="section-title">고객센터 문의 안내</h2>
+      <div class="box box-warning">
+        <span class="box-icon">⚠️</span>
+        <div class="box-content">
+          <div class="box-title">오로라 어드민 고객센터 문의 응대 필수</div>
+          오감리뷰 측으로 인입된 크리에이터 문의로 파트너사와 확인이 필요한 경우,
+          '고객센터 문의' 게시판을 통해 문의가 전달됩니다.<br>
+          오늘의집 고객센터에서 담당자님께 직접 연락드릴 수 있으니,
+          <strong>고객센터 연락 시 반드시 응대</strong>해 주시기 바랍니다.
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ PRO ══ -->
+    <section class="section has-toc" id="pro">
+      <div class="section-body">
+        <div class="page-badge">광고 상품</div>
+        <h1 class="page-title">오감리뷰 PRO</h1>
+        <p class="page-desc">오늘의집 내 영향력 있는 크리에이터에게 제품을 제공해 <br>고퀄리티 리뷰 콘텐츠를 획득하는 상품입니다.</p>
+
+        <div class="product-header">
+          <span class="product-badge badge-pro">PRO</span>
+          <span class="product-tagline">제품 바이럴 &amp; 브랜딩 · 고감도 스타일링 이미지 · 크리에이터 인스타 홍보</span>
+        </div>
+
+        <h2 class="section-title" id="pro-review">리뷰 콘텐츠</h2>
+        <div class="cards-grid" style="margin-bottom:16px;">
+          <div style="border-radius:8px;overflow:hidden;border:1px solid var(--border)">
+            <img src="프로 설명 페이지/프로 리뷰콘텐츠1.jpg" alt="PRO 리뷰 콘텐츠 예시 1" style="width:100%;display:block;object-fit:cover;" onerror="this.style.display='none'" />
+          </div>
+          <div style="border-radius:8px;overflow:hidden;border:1px solid var(--border)">
+            <img src="프로 설명 페이지/프로 리뷰콘텐츠2.jpg" alt="PRO 리뷰 콘텐츠 예시 2" style="width:100%;display:block;object-fit:cover;" onerror="this.style.display='none'" />
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>콘텐츠 유형</th><th>설명</th></tr></thead>
+            <tbody>
+              <tr><td>① 스타일링샷</td><td>유저들의 스타일링샷 (오늘의집 메인 노출)</td></tr>
+              <tr><td>② 스토어리뷰</td><td>제품 페이지 스토어리뷰</td></tr>
+              <tr><td>③ 개인 인스타그램</td><td>크리에이터 개인 인스타그램 업로드</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="section-title" id="pro-effect">기대효과</h2>
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-value">1.2만</div>
+            <div class="stat-label">콘텐츠 평균 조회수</div>
+            <div class="stat-up">1개월 / 10명 기준</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">230%</div>
+            <div class="stat-label">스타일링샷 접속수 증가</div>
+            <div class="stat-up">1개월 기준</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">무료</div>
+            <div class="stat-label">2차 이미지 라이선스</div>
+            <div class="stat-up">자사몰 · SNS 활용 가능</div>
+          </div>
+        </div>
+
+        <ul class="benefit-list">
+          <li><span class="benefit-num">1</span><span>오늘의집에서 영향력 있는 크리에이터와 함께합니다.</span></li>
+          <li><span class="benefit-num">2</span><span>오늘의집 크리에이터만의 감도가 담긴 콘텐츠를 획득할 수 있습니다.</span></li>
+          <li><span class="benefit-num">3</span><span>고퀄리티 브랜드 에셋 확보가 가능합니다.</span></li>
+          <li><span class="benefit-num">4</span><span>크리에이터의 SNS 업로드로 추가 노출 효과를 높일 수 있습니다.</span></li>
+          <li><span class="benefit-num">5</span><span>생산된 이미지는 자사몰·SNS 등 다양한 채널에 활용할 수 있습니다.</span></li>
+        </ul>
+
+        <h2 class="section-title" id="pro-price">단가</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>인원수</th><th>단가 (공급가)</th><th>1인당 단가</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>5명</td><td class="td-highlight">150만 원</td><td>30만 원/인</td></tr>
+              <tr><td>10명</td><td class="td-highlight">250만 원</td><td>25만 원/인</td></tr>
+              <tr><td>15명</td><td class="td-highlight">350만 원</td><td>23.3만 원/인</td></tr>
+              <tr><td>20명</td><td class="td-highlight">450만 원</td><td>22.5만 원/인</td></tr>
+              <tr><td>25명</td><td class="td-highlight">550만 원</td><td>22만 원/인</td></tr>
+              <tr><td>30명</td><td class="td-highlight">650만 원</td><td>21.7만 원/인</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size:13px;color:var(--text-secondary);">※ 최소 진행 인원: 5인 / 부가광고상품은 PRO 진행 시에만 가능</p>
+
+        <h2 class="section-title" id="pro-upload">업로드 횟수 (판매가 기준)</h2>
+        <div class="upload-rule">
+          <div class="upload-rule-row">
+            <div>200만 원 미만</div>
+            <div><strong>업로드 1회</strong><br><span style="font-size:13px;color:var(--text-secondary)">오늘의집 1회 · 인스타그램 1회 · 스토어리뷰 1회 <br>➡️ 총 3개 콘텐츠</span></div>
+          </div>
+          <div class="upload-rule-row">
+            <div>200만 원 이상</div>
+            <div><strong>업로드 2회</strong><br><span style="font-size:13px;color:var(--text-secondary)">오늘의집 2회 · 인스타그램 2회 · 스토어리뷰 1회 <br>➡️ 총 5개 콘텐츠</span></div>
+          </div>
+        </div>
+        <p style="font-size:13px;color:var(--text-secondary);margin-top:8px;">※ 스토어리뷰는 판매가와 무관하게 1인당 1회만 작성 가능합니다.</p>
+
+        <h2 class="section-title" id="pro-license">2차 라이선스</h2>
+        <div class="box box-new">
+          <span class="box-icon">📢</span>
+          <div class="box-content">
+            <div class="box-title">PRO 이미지 2차 라이선스 무료 제공</div>
+            PRO에서 생산된 이미지는 2차 이미지 라이선스를 자유롭게 사용할 수 있습니다.
+          </div>
+        </div>
+        <div class="license-section" style="border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;padding:0 16px;">
+          <div class="license-row"><div class="license-label">제공 범위</div><div class="license-value">이미지 한정 (텍스트는 협의 후 진행 가능)</div></div>
+          <div class="license-row"><div class="license-label">활용 가능 범위</div><div class="license-value">오늘의집 내부 (상세페이지·기획전 등) · 자사몰 · 자사 SNS</div></div>
+          <div class="license-row"><div class="license-label">활용 불가</div><div class="license-value"><span class="tag tag-red">타 커머스·플랫폼 사용 불가</span></div></div>
+        </div>
+      </div>
+
+      <aside class="section-toc">
+        <div class="toc-label">PRO 상품</div>
+        <a class="toc-item" href="#pro-review">리뷰 콘텐츠</a>
+        <a class="toc-item" href="#pro-effect">기대효과</a>
+        <a class="toc-item" href="#pro-price">단가</a>
+        <a class="toc-item" href="#pro-upload">업로드 횟수</a>
+        <a class="toc-item" href="#pro-license">2차 라이선스</a>
+      </aside>
+    </section>
+
+    <!-- ══ ADDON ══ -->
+    <section class="section has-toc" id="addon">
+      <div class="section-body">
+        <div class="page-badge">부가광고상품</div>
+        <h1 class="page-title">PRO 부가광고상품</h1>
+        <p class="page-desc">오감리뷰 PRO에 한하여 진행되는 광고 상품입니다. <br>오감리뷰 체험단 리뷰를 2차 가공해 브랜딩을 위한 추가 노출 콘텐츠를 제작·노출합니다.</p>
+
+        <div class="box box-warning">
+          <span class="box-icon">⚠️</span>
+          <div class="box-content">
+            <div class="box-title">단독 진행 불가</div>
+            부가광고상품은 반드시 오감리뷰 PRO 체험단 상품과 함께 진행해야 합니다.
+            또한 월 단위로 제한된 구좌만 운영되므로 <strong>조기 마감될 수 있습니다.</strong> 사전에 일정을 문의해 주세요.
+          </div>
+        </div>
+
+        <!-- 부가 광고 상품 구성 -->
+        <h2 class="section-title" id="addon-recommend">상품 구성</h2>
+        <div class="addon-recommend-grid-3">
+          <div class="addon-recommend-card">
+            <div class="addon-recommend-icon">📱</div>
+            <div class="addon-recommend-name">오늘의집 인스타그램</div>
+            <div class="addon-recommend-sub">원브랜드 콘텐츠</div>
+            <div class="addon-recommend-price">1,000만 원</div>
+            <div class="addon-recommend-reach">팔로워 130만 · 평균 11.3만 노출</div>
+          </div>
+          <div class="addon-recommend-card">
+            <div class="addon-recommend-icon">🏠</div>
+            <div class="addon-recommend-name">오늘의집 인앱</div>
+            <div class="addon-recommend-sub">원브랜드 콘텐츠</div>
+            <div class="addon-recommend-price">300만 원</div>
+            <div class="addon-recommend-reach">평균 4만~5만 노출 <br>상세 유입 ▲654.79%</div>
+          </div>
+          <div class="addon-recommend-card">
+            <div class="addon-recommend-icon">📋</div>
+            <div class="addon-recommend-name">OGAM LIST</div>
+            <div class="addon-recommend-sub">2~3개 브랜드 아카이빙 콘텐츠</div>
+            <div class="addon-recommend-price">100만 원</div>
+            <div class="addon-recommend-reach">평균 4만~5만 노출 <br>상세 유입 ▲592.14%</div>
+          </div>
+        </div>
+
+        <!-- 상품 1: 인스타그램 -->
+        <h2 class="section-title" id="addon-insta">📱 오늘의집 인스타그램 - 원브랜드 콘텐츠</h2>
+        <div class="addon-card">
+          <div class="addon-card-header">
+            <div class="addon-card-title">오늘의집 인스타그램 원브랜드 콘텐츠</div>
+            <div class="price-tag">1,000만 원</div>
+          </div>
+          <div class="addon-card-body">
+            <div class="addon-desc-with-btn">
+              <p style="color:var(--text-secondary);font-size:13.5px;margin:0;">
+                오감리뷰 체험단 리뷰를 2차 가공해 <br>오늘의집 공식 인스타그램 피드 콘텐츠로 제작합니다.
+              </p>
+              <a href="https://www.instagram.com/p/DEv_l_CIonv/?img_index=1" target="_blank" class="content-link-card">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                예시 보기
+              </a>
+            </div>
+            <div class="addon-meta">
+              <div class="addon-meta-item">
+                <div class="addon-meta-label">노출 지면/채널</div>
+                <div class="addon-meta-value">오늘의집 인스타그램 피드 1회</div>
+              </div>
+              <div class="addon-meta-item">
+                <div class="addon-meta-label">예상 노출</div>
+                <div class="addon-meta-value">팔로워 130만 · 평균 <strong style="color:var(--brand)">11.3만</strong></div>
+              </div>
+              <div class="addon-meta-item">
+                <div class="addon-meta-label">한정 구좌</div>
+                <div class="addon-meta-value">월 4개 / 일정 협의 필요</div>
+              </div>
+            </div>
+            <img src="프로 부가광고상품/오늘의집 인스타그램.png" alt="오늘의집 인스타그램 예시" class="addon-img" onerror="this.style.display='none'" />
+          </div>
+        </div>
+
+        <!-- 상품 2: 원브랜드 -->
+        <h2 class="section-title" id="addon-inapp">🏠 오늘의집 인앱 - 원브랜드 콘텐츠 (오감의 아이템)</h2>
+        <div class="addon-card">
+          <div class="addon-card-header">
+            <div class="addon-card-title">오늘의집 인앱 원브랜드 콘텐츠</div>
+            <div class="price-tag">300만 원</div>
+          </div>
+          <div class="addon-card-body">
+            <div class="addon-desc-with-btn">
+              <p style="color:var(--text-secondary);font-size:13.5px;margin:0;">
+                리뷰를 2차 가공해 제품의 USP를 담은 원브랜드 콘텐츠를 제작합니다.
+              </p>
+              <a href="https://contents.ohou.se/contents/card_collections/1004579273" target="_blank" class="content-link-card">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                예시 보기
+              </a>
+            </div>
+            <div class="addon-meta">
+              <div class="addon-meta-item">
+                <div class="addon-meta-label">노출 지면/채널</div>
+                <div class="addon-meta-value">오늘의가든 물주기 미션 (1회 고정 노출)</div>
+              </div>
+              <div class="addon-meta-item">
+                <div class="addon-meta-label">예상 노출</div>
+                <div class="addon-meta-value">평균 <strong style="color:var(--brand)">4만~5만</strong></div>
+              </div>
+              <div class="addon-meta-item">
+                <div class="addon-meta-label">상세페이지 유입</div>
+                <div class="addon-meta-value" style="color:#059669;font-weight:700;">▲ 654.79%</div>
+              </div>
+              <div class="addon-meta-item">
+                <div class="addon-meta-label">한정 구좌</div>
+                <div class="addon-meta-value">월 4개 / 일정 협의 필요</div>
+              </div>
+            </div>
+            <img src="프로 부가광고상품/오감의 아이템.png" alt="오감의 아이템" class="addon-img" onerror="this.style.display='none'" />
+          </div>
+        </div>
+
+        <!-- 상품 3: OGAM LIST -->
+        <h2 class="section-title" id="addon-ogamlist">📋 OGAM LIST</h2>
+        <div class="addon-card">
+          <div class="addon-card-header">
+            <div class="addon-card-title">OGAM LIST</div>
+            <div class="price-tag">100만 원</div>
+          </div>
+          <div class="addon-card-body">
+            <div class="addon-desc-with-btn">
+              <p style="color:var(--text-secondary);font-size:13.5px;margin:0;">
+                2~3개 브랜드 제품의 USP를 모아 아카이빙 모음집 콘텐츠로 제작합니다.
+              </p>
+              <a href="https://contents.ohou.se/contents/card_collections/1004365605" target="_blank" class="content-link-card">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                예시 보기
+              </a>
+            </div>
+            <div class="addon-meta">
+              <div class="addon-meta-item">
+                <div class="addon-meta-label">노출 지면/채널</div>
+                <div class="addon-meta-value">오늘의가든 물주기 미션 (1회 고정 노출)</div>
+              </div>
+              <div class="addon-meta-item">
+                <div class="addon-meta-label">예상 노출</div>
+                <div class="addon-meta-value">평균 <strong style="color:var(--brand)">4만~5만</strong></div>
+              </div>
+              <div class="addon-meta-item">
+                <div class="addon-meta-label">상세페이지 유입</div>
+                <div class="addon-meta-value" style="color:#059669;font-weight:700;">▲ 592.14%</div>
+              </div>
+              <div class="addon-meta-item">
+                <div class="addon-meta-label">한정 구좌</div>
+                <div class="addon-meta-value">월 4개 / 일정 협의 필요</div>
+              </div>
+            </div>
+            <img src="프로 부가광고상품/OGAM LIST.png" alt="OGAM LIST" class="addon-img" onerror="this.style.display='none'" />
+          </div>
+        </div>
+
+        <!-- 노출 지면 안내 (독립 섹션) -->
+        <h2 class="section-title" id="addon-exposure">오늘의집 노출 지면</h2>
+        <img src="프로 부가광고상품/오늘의집 노출지면 확인방법.jpg" alt="오늘의집 노출지면 확인방법" class="content-img" onerror="this.style.display='none'" />
+        <p class="img-caption">오늘의집 노출 지면 확인 방법 — 오늘의가든 물주기 미션 페이지</p>
+
+        <div class="box box-info" style="margin-top:8px">
+          <span class="box-icon">💡</span>
+          <div class="box-content">부가광고상품 콘텐츠는 미션으로 진행되어 <strong>15초간 노출</strong>됩니다. 평균 <strong>5만 PV</strong> 노출 효과를 제공합니다.</div>
+        </div>
+      </div>
+
+      <aside class="section-toc">
+        <div class="toc-label">PRO 부가광고상품</div>
+        <a class="toc-item" href="#addon-recommend">상품 구성</a>
+        <a class="toc-item" href="#addon-insta">오늘의집 공식 인스타그램 콘텐츠</a>
+        <a class="toc-item" href="#addon-inapp">오늘의집 인앱 원브랜드 콘텐츠</a>
+        <a class="toc-item" href="#addon-ogamlist">OGAM LIST</a>
+        <a class="toc-item" href="#addon-exposure">노출 지면</a>
+      </aside>
+    </section>
+
+    <!-- ══ ROOKIE ══ -->
+    <section class="section has-toc" id="rookie">
+      <div class="section-body">
+        <div class="page-badge">광고 상품</div>
+        <h1 class="page-title">오감리뷰 ROOKIE</h1>
+        <p class="page-desc">오늘의집 내부 선별 크리에이터에게 제품을 제공하여 <br>실사용 기반 리뷰 콘텐츠를 획득하는 상품입니다.</p>
+
+        <div class="product-header" style="background: linear-gradient(135deg,#ECFDF5 0%,#fff 100%);border-color:#A7F3D0;">
+          <span class="product-badge badge-rookie">ROOKIE</span>
+          <span class="product-tagline">리뷰 수 자체 증가 · 상세한 사용 리뷰 콘텐츠 · 제품 구매 전환 증가</span>
+        </div>
+
+        <h2 class="section-title" id="rookie-review">리뷰 콘텐츠</h2>
+        <img src="루키 설명 페이지/루키 노출 지면.jpg" alt="루키 노출 지면" class="content-img" onerror="this.style.display='none'" />
+        <p class="img-caption">ROOKIE 노출 지면 안내</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>콘텐츠 유형</th><th>업로드 횟수</th></tr></thead>
+            <tbody>
+              <tr><td>① 스타일링샷</td><td>1회</td></tr>
+              <tr><td>② 스토어리뷰</td><td>1회</td></tr>
+              <tr><td colspan="2" style="font-size:13px;color:var(--text-secondary);">총 2개 콘텐츠 (1인 기준)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="section-title" id="rookie-effect">기대효과</h2>
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-value">147%</div>
+            <div class="stat-label">주문건수 증가</div>
+            <div class="stat-up">1개월 후 평균 <br>(2025.03 기준)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">5만원~</div>
+            <div class="stat-label">1인당 단가</div>
+            <div class="stat-up">가성비 체험단 프로그램</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">무료</div>
+            <div class="stat-label">2차 이미지 라이선스</div>
+            <div class="stat-up">자사몰 · SNS 활용 가능</div>
+          </div>
+        </div>
+
+        <ul class="benefit-list">
+          <li><span class="benefit-num">1</span><span>오늘의집에서 활동성이 높은 크리에이터와 함께합니다.</span></li>
+          <li><span class="benefit-num">2</span><span>실사용 경험 기반의 솔직한 콘텐츠를 얻을 수 있습니다.</span></li>
+          <li><span class="benefit-num">3</span><span>솔직한 스토어 텍스트 리뷰로 구매 전환 상승을 기대할 수 있습니다.</span></li>
+          <li><span class="benefit-num">4</span><span>생산된 이미지는 오늘의집 내부 및 자사몰·SNS에 자유롭게 활용할 수 있습니다.</span></li>
+        </ul>
+
+        <h2 class="section-title" id="rookie-price">단가</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>인원수</th><th>단가 (공급가)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>최소 5인</td><td class="td-highlight">25만 원</td></tr>
+              <tr><td>10인</td><td class="td-highlight">50만 원</td></tr>
+              <tr><td>20인</td><td class="td-highlight">100만 원</td></tr>
+              <tr><td>30인</td><td class="td-highlight">150만 원</td></tr>
+              <tr><td>40인</td><td class="td-highlight">200만 원</td></tr>
+              <tr><td>최대 50인</td><td class="td-highlight">250만 원</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size:13px;color:var(--text-secondary);">1인당 5만 원 · 최소 5인 ~ 최대 50인</p>
+
+        <h2 class="section-title" id="rookie-license">2차 라이선스</h2>
+        <div class="box box-new">
+          <span class="box-icon">📢</span>
+          <div class="box-content">
+            <div class="box-title">ROOKIE 이미지 2차 라이선스 무료 제공</div>
+            ROOKIE에서 생산된 이미지는 2차 이미지 라이선스를 자유롭게 사용할 수 있습니다.
+          </div>
+        </div>
+        <div class="license-section" style="border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;padding:0 16px;">
+          <div class="license-row"><div class="license-label">제공 범위</div><div class="license-value">이미지 한정 (텍스트는 협의 후 진행 가능)</div></div>
+          <div class="license-row"><div class="license-label">활용 가능 범위</div><div class="license-value">오늘의집 내부 (상세페이지·기획전 등) · 자사몰 · 자사 공식 SNS</div></div>
+          <div class="license-row"><div class="license-label">활용 불가</div><div class="license-value"><span class="tag tag-red">타 커머스·플랫폼 사용 불가</span></div></div>
+        </div>
+
+        <h2 class="section-title" id="rookie-compare">PRO vs ROOKIE 비교</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>항목</th><th>PRO</th><th>ROOKIE</th></tr></thead>
+            <tbody>
+              <tr><td>목적</td><td>브랜딩 &amp; 바이럴</td><td>구매 전환 &amp; 리뷰 수 확보</td></tr>
+              <tr><td>대상 크리에이터</td><td>오늘의집 Top 크리에이터</td><td>내부 선별 크리에이터</td></tr>
+              <tr><td>사진 분량</td><td>CC 8장 이상</td><td>CC 3장 이상</td></tr>
+              <tr><td>텍스트 분량</td><td>300자 이상</td><td>500자 이상</td></tr>
+              <tr><td>업로드 횟수</td><td>1~2회 (판매가 기준)</td><td>1회</td></tr>
+              <tr><td>업로드 지면</td><td>스타일링샷 + 스토어리뷰 + 인스타</td><td>스타일링샷 + 스토어리뷰</td></tr>
+              <tr><td>인스타그램 업로드</td><td>✅ 포함</td><td>❌ 미포함</td></tr>
+              <tr><td>부가광고상품</td><td>✅ 가능</td><td>❌ 불가</td></tr>
+              <tr><td>2차 라이선스</td><td>✅ 무료 제공</td><td>✅ 무료 제공</td></tr>
+              <tr><td>인원</td><td>5~30명</td><td>5~50명</td></tr>
+              <tr><td>1인 단가</td><td>21.7~30만 원</td><td>5만 원</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <aside class="section-toc">
+        <div class="toc-label">ROOKIE 상품 소개</div>
+        <a class="toc-item" href="#rookie-review">리뷰 콘텐츠</a>
+        <a class="toc-item" href="#rookie-effect">기대효과</a>
+        <a class="toc-item" href="#rookie-price">단가</a>
+        <a class="toc-item" href="#rookie-license">2차 라이선스</a>
+        <a class="toc-item" href="#rookie-compare">PRO vs ROOKIE</a>
+      </aside>
+    </section>
+
+    <!-- ══ PROCESS ══ -->
+    <section class="section has-toc" id="process">
+      <div class="section-body">
+        <div class="page-badge">운영 가이드</div>
+        <h1 class="page-title">오감리뷰 진행 프로세스</h1>
+        <p class="page-desc">오감리뷰는 매달 진행되는 프로그램입니다. 아래 프로세스와 세부 일정 안내를 참고해 주세요.</p>
+
+        <a class="link-card" href="https://orora.ohou.se/signin?redirectUrl=%2F" target="_blank">
+          <div class="link-card-icon">🏠</div>
+          <div class="link-card-body">
+            <div class="link-card-title">오늘의집 오로라 어드민 바로가기</div>
+            <div class="link-card-desc">체험단 신청 및 관리 페이지</div>
+          </div>
+          <svg class="link-card-arrow" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+        <a class="link-card" href="https://drive.google.com/file/d/15Ay5nNYj04l7OsXy94o7hOM76N_91dzm/view" target="_blank">
+          <div class="link-card-icon">🖥️</div>
+          <div class="link-card-body">
+            <div class="link-card-title">오감리뷰 어드민 등록 가이드</div>
+            <div class="link-card-desc">어드민 등록 방법 PDF 바로 보기</div>
+          </div>
+          <svg class="link-card-arrow" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+
+        <h2 class="section-title" id="process-flow">전체 진행 프로세스</h2>
+        <div class="process-flow">
+          <div class="process-step">
+            <div class="process-step-num">1</div>
+            <div class="process-step-content">
+              <div class="process-step-title">제품 등록</div>
+              <div class="process-step-desc">파트너사가 오로라 어드민에서 체험단 진행 제품을 등록합니다.</div>
+            </div>
+          </div>
+          <div class="process-arrow">↓</div>
+          <div class="process-step">
+            <div class="process-step-num">2</div>
+            <div class="process-step-content">
+              <div class="process-step-title">제품 확정</div>
+              <div class="process-step-desc">오늘의집에서 신청 제품을 검토 후 확정 결과를 통보합니다.</div>
+            </div>
+          </div>
+          <div class="process-arrow">↓</div>
+          <div class="process-step">
+            <div class="process-step-num">3</div>
+            <div class="process-step-content">
+              <div class="process-step-title">어드민 확인 &amp; 계약 성립</div>
+              <div class="process-step-desc">파트너사가 어드민에서 확정 여부를 확인하고, 이의제기 또는 취소 요청이 없으면 자동으로 계약이 성립됩니다.</div>
+            </div>
+          </div>
+          <div class="process-arrow">↓</div>
+          <div class="process-step">
+            <div class="process-step-num">4</div>
+            <div class="process-step-content">
+              <div class="process-step-title">리뷰어 모집</div>
+              <div class="process-step-desc">오늘의집에서 크리에이터에게 초대장을 발송하고 2일간 모집을 진행합니다.</div>
+            </div>
+          </div>
+          <div class="process-arrow">↓</div>
+          <div class="process-step">
+            <div class="process-step-num">5</div>
+            <div class="process-step-content">
+              <div class="process-step-title">당첨자 발표 &amp; 명단 컨펌</div>
+              <div class="process-step-desc">ROOKIE 당첨자 발표 후 루키 제품 배송이 시작됩니다. PRO는 오늘의집 내부 선정 후 파트너사의 명단 컨펌을 거쳐 발표됩니다.</div>
+            </div>
+          </div>
+          <div class="process-arrow">↓</div>
+          <div class="process-step">
+            <div class="process-step-num">6</div>
+            <div class="process-step-content">
+              <div class="process-step-title">제품 배송</div>
+              <div class="process-step-desc">파트너사가 선정된 크리에이터에게 직접 제품을 배송합니다. (배송비 파트너사 부담)</div>
+            </div>
+          </div>
+          <div class="process-arrow">↓</div>
+          <div class="process-step">
+            <div class="process-step-num">7</div>
+            <div class="process-step-content">
+              <div class="process-step-title">리뷰 콘텐츠 작성</div>
+              <div class="process-step-desc">크리에이터가 제품을 직접 사용한 후 리뷰 콘텐츠를 작성·업로드합니다.</div>
+            </div>
+          </div>
+          <div class="process-arrow">↓</div>
+          <div class="process-step">
+            <div class="process-step-num">8</div>
+            <div class="process-step-content">
+              <div class="process-step-title">게재 보고서 발송</div>
+              <div class="process-step-desc">리뷰 마감일 이후 7영업일 내 게재 보고서가 발송됩니다. 결과 보고서는 세금계산서 발행 전 전달됩니다.</div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="section-title" id="process-schedule">세부 일정 안내</h2>
+        <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:16px;">회차별 세부 일정을 확인하세요. 일정은 운영 상황에 따라 변동될 수 있습니다.</p>
+
+        <div class="schedule-month-tabs">
+          <button class="schedule-month-tab active" data-month="mar">3월 1회차</button>
+          <button class="schedule-month-tab" data-month="apr">4월 1회차</button>
+          <button class="schedule-month-tab" data-month="may">5월 1회차</button>
+        </div>
+
+        <div class="schedule-table-panel active" id="schedule-mar">
+          <div class="cal-img-wrap">
+            <img src="달력/3월 상세일정표.png" alt="3월 1회차 세부 일정" class="cal-img" onclick="openLightbox(this.src, this.alt)">
+            <button class="cal-zoom-btn" onclick="openLightbox('달력/3월 상세일정표.png', '3월 1회차 세부 일정')" title="크게 보기">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              상세보기
+            </button>
+          </div>
+        </div>
+
+        <div class="schedule-table-panel" id="schedule-apr">
+          <div class="cal-img-wrap">
+            <img src="달력/4월 상세일정표.png" alt="4월 1회차 세부 일정" class="cal-img" onclick="openLightbox(this.src, this.alt)">
+            <button class="cal-zoom-btn" onclick="openLightbox('달력/4월 상세일정표.png', '4월 1회차 세부 일정')" title="크게 보기">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              상세보기
+            </button>
+          </div>
+        </div>
+
+        <div class="schedule-table-panel" id="schedule-may">
+          <div class="cal-img-wrap">
+            <img src="달력/5월 상세일정표.png" alt="5월 1회차 세부 일정" class="cal-img" onclick="openLightbox(this.src, this.alt)">
+            <button class="cal-zoom-btn" onclick="openLightbox('달력/5월 상세일정표.png', '5월 1회차 세부 일정')" title="크게 보기">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+              상세보기
+            </button>
+          </div>
+        </div>
+
+        <div class="box box-info" style="margin-top:16px;">
+          <span class="box-icon">💡</span>
+          <div class="box-content" style="font-size:13px;">
+            게재 보고서는 리뷰 마감일 이후 7영업일 내 전달됩니다.
+            세금계산서는 리뷰어 모집 월+1의 말일에 발행됩니다.
+          </div>
+        </div>
+
+        <h2 class="section-title" id="process-apply">신청 방법</h2>
+        <div class="box box-info">
+          <span class="box-icon">📍</span>
+          <div class="box-content">
+            오감리뷰는 매달 진행되는 프로그램이며,
+            <a href="https://orora.ohou.se/signin?redirectUrl=%2F" target="_blank" style="color:inherit;font-weight:700;text-decoration:underline;">오감리뷰 어드민/오로라</a>에서
+            제품 모집 공지를 확인할 수 있습니다.
+            신청 기간을 놓친 경우 오감리뷰 메일로 문의해 주시면
+            추가 인입 가능한지 확인해 드리겠습니다.<br>
+            <br>
+            📧 오감리뷰 메일:
+            <a href="mailto:ogam_review@bucketplace.net" style="color:inherit;font-weight:700;text-decoration:underline;">ogam_review@bucketplace.net</a>
+          </div>
+        </div>
+      </div>
+
+      <aside class="section-toc">
+        <div class="toc-label">진행 프로세스</div>
+        <a class="toc-item" href="#process-flow">전체 프로세스</a>
+        <a class="toc-item" href="#process-schedule">세부 일정</a>
+        <a class="toc-item" href="#process-apply">신청 방법</a>
+      </aside>
+    </section>
+
+    <!-- ══ EXAMPLES ══ -->
+    <section class="section has-toc" id="examples">
+      <div class="section-body">
+        <div class="page-badge">콘텐츠 예시</div>
+        <h1 class="page-title">오감리뷰 콘텐츠 예시</h1>
+        <p class="page-desc">PRO·ROOKIE 카테고리별 실제 오감리뷰 콘텐츠 예시를 확인해 보세요.</p>
+
+        <a class="link-card" href="https://contents.ohou.se/hashtags/%EC%98%A4%EA%B0%90%EB%A6%AC%EB%B7%B0" target="_blank">
+          <div class="link-card-icon">🔍</div>
+          <div class="link-card-body">
+            <div class="link-card-title">#오감리뷰 콘텐츠 보러가기</div>
+            <div class="link-card-desc">오늘의집에서 오감리뷰 태그로 발행된 모든 콘텐츠 확인</div>
+          </div>
+          <svg class="link-card-arrow" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+
+        <h2 class="section-title" id="examples-pro">PRO 카테고리별 콘텐츠 예시</h2>
+
+        <h3 class="sub-title">🏡 홈데코/조명</h3>
+        <div class="content-img-grid">
+          <a href="https://contents.ohou.se/contents/card_collections/1003263312" target="_blank" class="content-img-card">
+            <img src="콘텐츠 예시/프로-홈데코 조명 예시 1.jpg" alt="홈데코/조명 예시 1" onerror="this.style.display='none'" />
+            <div class="content-img-label">홈데코/조명 예시 1</div>
+          </a>
+          <a href="https://contents.ohou.se/contents/card_collections/1004449004" target="_blank" class="content-img-card">
+            <img src="콘텐츠 예시/프로-홈데코 조명 예시 2.jpg" alt="홈데코/조명 예시 2" onerror="this.style.display='none'" />
+            <div class="content-img-label">홈데코/조명 예시 2</div>
+          </a>
+        </div>
+
+        <h3 class="sub-title">📺 가전</h3>
+        <div class="content-img-grid">
+          <a href="https://contents.ohou.se/contents/card_collections/1004808686" target="_blank" class="content-img-card">
+            <img src="콘텐츠 예시/프로-가전 예시 1.avif" alt="가전 예시 1" onerror="this.style.display='none'" />
+            <div class="content-img-label">가전 예시 1</div>
+          </a>
+          <a href="https://contents.ohou.se/contents/card_collections/1004017025" target="_blank" class="content-img-card">
+            <img src="콘텐츠 예시/프로-가전 예시2.avif" alt="가전 예시 2" onerror="this.style.display='none'" />
+            <div class="content-img-label">가전 예시 2</div>
+          </a>
+        </div>
+
+        <h3 class="sub-title">🪑 가구</h3>
+        <div class="content-img-grid">
+          <a href="https://contents.ohou.se/contents/card_collections/1002482236" target="_blank" class="content-img-card">
+            <img src="콘텐츠 예시/프로- 가구 예시 1.avif" alt="가구 예시 1" onerror="this.style.display='none'" />
+            <div class="content-img-label">가구 예시 1</div>
+          </a>
+          <a href="https://contents.ohou.se/contents/card_collections/1004121092" target="_blank" class="content-img-card">
+            <img src="콘텐츠 예시/프로-가구 예시 2.avif" alt="가구 예시 2" onerror="this.style.display='none'" />
+            <div class="content-img-label">가구 예시 2</div>
+          </a>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2 class="section-title" id="examples-rookie">ROOKIE 카테고리별 콘텐츠 예시</h2>
+
+        <h3 class="sub-title">🛏️ 패브릭</h3>
+        <div class="content-img-grid">
+          <a href="https://contents.ohou.se/contents/card_collections/1004827034" target="_blank" class="content-img-card">
+            <img src="콘텐츠 예시/루키 - 패브릭 예시 1.png" alt="패브릭 예시 1" onerror="this.style.display='none'" />
+            <div class="content-img-label">패브릭 예시 1</div>
+          </a>
+          <a href="https://contents.ohou.se/contents/card_collections/1004717579" target="_blank" class="content-img-card">
+            <img src="콘텐츠 예시/루키- 패브릭 예시 2.png" alt="패브릭 예시 2" onerror="this.style.display='none'" />
+            <div class="content-img-label">패브릭 예시 2</div>
+          </a>
+        </div>
+
+        <h3 class="sub-title">📺 가전</h3>
+        <div class="content-img-grid">
+          <a href="https://contents.ohou.se/contents/card_collections/1003922041" target="_blank" class="content-img-card">
+            <img src="콘텐츠 예시/루키 - 가전 예시 1.jfif" alt="가전 예시 1" onerror="this.style.display='none'" />
+            <div class="content-img-label">가전 예시 1</div>
+          </a>
+          <a href="https://contents.ohou.se/contents/card_collections/1004849979" target="_blank" class="content-img-card">
+            <img src="콘텐츠 예시/루키 - 가전 예시 2.png" alt="가전 예시 2" onerror="this.style.display='none'" />
+            <div class="content-img-label">가전 예시 2</div>
+          </a>
+        </div>
+
+        <h3 class="sub-title">🪑 가구</h3>
+        <div class="content-img-grid">
+          <a href="https://contents.ohou.se/contents/card_collections/1004826256" target="_blank" class="content-img-card">
+            <img src="콘텐츠 예시/루키 - 가구 예시 1.png" alt="가구 예시 1" onerror="this.style.display='none'" />
+            <div class="content-img-label">가구 예시 1</div>
+          </a>
+          <a href="https://contents.ohou.se/contents/card_collections/1004850562" target="_blank" class="content-img-card">
+            <img src="콘텐츠 예시/루키- 가구 예시 2.png" alt="가구 예시 2" onerror="this.style.display='none'" />
+            <div class="content-img-label">가구 예시 2</div>
+          </a>
+        </div>
+      </div>
+
+      <aside class="section-toc">
+        <div class="toc-label">콘텐츠 예시</div>
+        <a class="toc-item" href="#examples-pro">PRO 예시</a>
+        <a class="toc-item" href="#examples-rookie">ROOKIE 예시</a>
+      </aside>
+    </section>
+
+    <!-- ══ LICENSE ══ -->
+    <section class="section" id="license">
+      <div class="page-badge">운영 가이드</div>
+      <h1 class="page-title">2차 라이선스 활용 안내</h1>
+      <p class="page-desc">오감리뷰를 통해 생산된 리뷰 콘텐츠를 2차로 활용하기 위한 절차와 정책을 안내합니다.</p>
+
+      <!-- 개요 -->
+      <div class="license-hero">
+        <div class="license-hero-check">✅</div>
+        <div class="license-hero-body">
+          <div class="license-hero-title">리뷰 콘텐츠 2차 활용 안내</div>
+          <p class="license-hero-desc">라이선스 활용을 희망하시는 경우, 반드시 아래의 신청서 구글폼을 제출하여야 합니다.<br>
+          <strong>[루키]</strong> / <strong>[프로]</strong> 참여 유형을 구분하여 각각 제출 부탁드립니다.</p>
+        </div>
+      </div>
+
+      <!-- 주의사항 -->
+      <h2 class="section-title">주의사항</h2>
+      <div class="license-notices">
+        <div class="license-notice-item">
+          <div class="license-notice-num">01</div>
+          <div class="license-notice-text">활용하고자 하는 후기의 콘텐츠 이미지는 <strong>[리뷰 콘텐츠 내역]</strong>에 포함된 것에 한하며, 어드민 내에서 확인되는 링크를 통해 직접 수급해 주세요.</div>
+        </div>
+        <div class="license-notice-item">
+          <div class="license-notice-num">02</div>
+          <div class="license-notice-text">이미지 활용 시, 크리에이터의 오늘의집 닉네임을 반드시 이미지 내 <strong>출처</strong>로 표기해야 합니다.<br>
+          <span class="license-notice-example">예시: "오늘의집 000님의 오감리뷰"</span></div>
+        </div>
+      </div>
+
+      <!-- 신청 버튼 -->
+      <h2 class="section-title">라이선스 활용 신청</h2>
+      <div class="license-apply-grid">
+        <a class="license-apply-card" href="https://docs.google.com/forms/d/e/1FAIpQLSd82F96KIcmNqvGXpcRZLCyOO-LmjmXpk6edudQhmdCIEKtqQ/viewform" target="_blank">
+          <div class="license-apply-badge badge-rookie">ROOKIE</div>
+          <div class="license-apply-title">오감리뷰 루키<br>라이선스 활용 신청</div>
+          <div class="license-apply-cta">
+            신청하기
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+        <a class="license-apply-card" href="https://docs.google.com/forms/d/e/1FAIpQLSeI8K-E1EhFSU14SNXsNxl8zwfwL1DcCT_PPSX1mucdeZq3mA/viewform" target="_blank">
+          <div class="license-apply-badge badge-pro">PRO</div>
+          <div class="license-apply-title">오감리뷰 프로<br>라이선스 활용 신청</div>
+          <div class="license-apply-cta">
+            신청하기
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+      </div>
+
+      <!-- CS 안내 -->
+      <div class="license-cs-box">
+        <div class="license-cs-text">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" style="flex-shrink:0;margin-top:1px;"><path d="M12 3C6.477 3 2 6.477 2 10.5c0 2.697 1.605 5.056 4 6.44V21l3.5-2.5c.81.13 1.64.2 2.5.2 5.523 0 10-3.477 10-7.7S17.523 3 12 3z"/></svg>
+          오감리뷰 콘텐츠 2차 활용 관련 문의는 카카오톡 채널로 부탁드립니다.
+        </div>
+        <a class="license-cs-btn" href="https://pf.kakao.com/_xgxfnNG" target="_blank">
+          카카오톡 상담 바로가기
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ══ FAQ ══ -->
+    <section class="section has-toc" id="faq">
+      <div class="section-body">
+        <div class="page-badge">FAQ</div>
+        <h1 class="page-title">자주 묻는 질문</h1>
+        <p class="page-desc">오감리뷰 광고 운영과 관련해 파트너사에서 자주 문의하는 내용을 정리했습니다.</p>
+
+        <div class="faq-tabs">
+          <button class="faq-tab active" data-tab="faq-ad">광고 안내</button>
+          <button class="faq-tab" data-tab="faq-apply">체험단 신청</button>
+          <button class="faq-tab" data-tab="faq-license">프리 라이선스</button>
+        </div>
+
+        <!-- 광고 안내 -->
+        <div class="faq-list active" id="faq-ad">
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span><span class="faq-q-label">Q.</span>체험단 최소 진행 인원과 인원별 단가가 어떻게 되나요?</span>
+              <svg class="faq-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><span class="faq-a-label">A.</span>PRO와 ROOKIE 모두 최소 인원 5인부터 진행 가능합니다.
+
+<strong>PRO (프로)</strong>
+• 5명 : 150만 원 / 10명 : 250만 원 / 15명 : 350만 원
+• 20명 : 450만 원 / 25명 : 550만 원 / 30명 : 650만 원
+
+<strong>부가광고 상품 (PRO 진행 시 가능)</strong>
+• 오늘의집 인스타그램 원브랜드 콘텐츠 : 1,000만 원
+• 오늘의집 인앱 원브랜드 콘텐츠 : 300만 원
+• 오늘의집 인앱 OGAM LIST : 100만 원
+
+<strong>ROOKIE (루키)</strong>
+• 인원 : 최소 5인 ~ 최대 50인
+• 비용 : 1인당 5만 원</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span><span class="faq-q-label">Q.</span>사진이 아닌 영상(롱폼, 숏폼 등) 리뷰로 진행 가능한가요?</span>
+              <svg class="faq-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><span class="faq-a-label">A.</span>기본적으로 PRO와 ROOKIE 모두 사진 형태의 리뷰 생산으로 진행됩니다.
+다만 PRO에서는 부가 광고 상품으로 숏폼 리뷰 수급이 가능합니다.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span><span class="faq-q-label">Q.</span>진행 제품에 대한 제품가 제한이 있나요?</span>
+              <svg class="faq-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><span class="faq-a-label">A.</span>오늘의집 내에서 판매 중인 제품이라면 금액 제한 없이 신청 가능합니다.
+
+다만 PRO의 경우 제공 제품가의 합산이 5만 원 상당 미만일 경우,
+크리에이터 모집 과정에서 미달될 가능성을 고려하여 최종 제품 선정에서 제한될 수 있습니다.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span><span class="faq-q-label">Q.</span>한 회차에 PRO·ROOKIE를 동시에 진행 가능한가요?</span>
+              <svg class="faq-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><span class="faq-a-label">A.</span>ROOKIE/PRO 동시 진행 가능하며, 원하시는 방향에 따라 진행하시면 됩니다.
+
+다만 이전 회차에서 크리에이터 모집이 저조했던 제품을 신청하실 경우,
+진행이 반려되거나 다른 제품의 신청을 권유받으실 수 있습니다.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span><span class="faq-q-label">Q.</span>오감리뷰 체험단 진행 없이, 부가광고상품만 단독 진행 가능한가요?</span>
+              <svg class="faq-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><span class="faq-a-label">A.</span>부가 광고 상품의 단독 진행은 불가합니다.
+
+부가 광고 상품은 오감리뷰 PRO 체험단 상품을 진행한 후,
+생산된 크리에이터들의 리뷰 콘텐츠를 재구성하여 판매하는 상품입니다.
+
+부가 광고 상품은 월 단위로 제한된 구좌만 운영되므로 조기 마감될 수 있습니다.
+진행을 고려하신다면 사전에 일정을 문의해 주시면 원활하게 안내드리겠습니다.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span><span class="faq-q-label">Q.</span>PRO와 ROOKIE의 리뷰 콘텐츠 차이점은 무엇인가요?</span>
+              <svg class="faq-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><span class="faq-a-label">A.</span><strong>PRO</strong>
+• 업로드 분량: 사진 8장 이상 / 텍스트 300자 이상
+• 업로드 횟수: 판매가 기준 (200만 원 미만 1회 / 200만 원 이상 2회)
+• 업로드 지면: 스타일링샷 + 스토어리뷰 + 크리에이터 개인 인스타그램
+
+<strong>ROOKIE</strong>
+• 업로드 분량: 사진 3장 이상 / 텍스트 500자 이상
+• 업로드 횟수: 1회
+• 업로드 지면: 스타일링샷 + 스토어리뷰</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span><span class="faq-q-label">Q.</span>오감리뷰도 여러 회차 진행이 가능한가요?</span>
+              <svg class="faq-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><span class="faq-a-label">A.</span>1개의 제품(상품코드)에 대해 여러 회차 진행이 가능하며, 구좌 제한 없이 신청·등록을 받고 있습니다.
+
+다만 오늘의집 입점 브랜드와 크리에이터 모두에게 좋은 경험을 줄 수 있는 제품을 우선적으로 선정하고 있어,
+매 회차 승인되지 않으실 수 있습니다.</div>
+          </div>
+
+        </div>
+
+        <!-- 체험단 신청 -->
+        <div class="faq-list" id="faq-apply">
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span><span class="faq-q-label">Q.</span>오감리뷰 신청 기간을 놓쳤는데, 추가 인입이 가능한가요?</span>
+              <svg class="faq-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><span class="faq-a-label">A.</span>오감리뷰는 매달 진행되는 프로그램이며,
+오로라에서 제품 모집 공지를 확인하실 수 있습니다.
+
+신청 기간을 놓치신 경우 오감리뷰 메일(ogam_review@bucketplace.net)로 문의해 주시면
+추가 인입 가능한지 확인해 드리겠습니다.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span><span class="faq-q-label">Q.</span>오감리뷰 어드민에서 최초 계정 등록 시, 이후 회차에서도 동일하게 사용 가능한가요?</span>
+              <svg class="faq-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><span class="faq-a-label">A.</span>네, 오감리뷰 페이지에서 최초 등록하신 계정은 이후 다른 회차에서도 동일하게 사용 가능합니다.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span><span class="faq-q-label">Q.</span>진행 제품의 옵션별(색상, 사이즈 등)로 체험단 인원을 설정할 수 있나요?</span>
+              <svg class="faq-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><span class="faq-a-label">A.</span>제품 등록 시 옵션별 인원 지정이 가능합니다.
+
+다만 옵션(색상·사이즈 등)에 따라 신청 크리에이터 인원이 미달되는 경우에는
+추가 모집 없이 최종 선정 인원으로 진행됩니다.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span><span class="faq-q-label">Q.</span>오감리뷰 제품 등록/신청은 어떻게 해야 하나요?</span>
+              <svg class="faq-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><span class="faq-a-label">A.</span>오늘의집 파트너에게 제공되는 오로라 광고 관리 탭에서
+오감리뷰 체험단 메뉴를 통해 약관 동의 후 제품 등록 및 신청을 진행하실 수 있습니다.
+
+📍 오로라 로그인 → 좌측 '광고관리' → 오감리뷰 체험단 접속
+오늘의집 오로라: https://orora.ohou.se/signin?redirectUrl=%2F</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span><span class="faq-q-label">Q.</span>PRO와 ROOKIE별로 신청 가능한 제품 카테고리가 있나요?</span>
+              <svg class="faq-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><span class="faq-a-label">A.</span><strong>반려 가능성이 높은 제품 (PRO·ROOKIE 공통)</strong>
+• 오늘의집에 입점 신청을 하지 않은 제품
+• 해당 회차에 같은 카테고리의 제품이 많을 경우 상품성에 따라 선정
+• 렌탈 및 리퍼 제품
+• 리뷰어가 직접 설치 시 위험성이 고려되는 제품
+• 쿠션 커버, 베개 커버 등 단일 제품으로 활용이 어려운 제품
+• 의료 기기 등 의료 용품
+
+<strong>PRO 전용 권장</strong>
+• 설치 조건이 필요한 설치형 제품 (거주 환경 제약 필요)
+• 페이스용 뷰티 제품
+
+<strong>ROOKIE 추가 제한</strong>
+• 오늘의집 홈페이지 기준 출고에 7일 이상 소요되는 제품
+• 시공 및 수리 카테고리</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span><span class="faq-q-label">Q.</span>1개의 구좌에 여러 개의 제품코드로 신청 가능한가요?</span>
+              <svg class="faq-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><span class="faq-a-label">A.</span>아니요, 1개의 제품(상품코드) 당 1개의 체험단(구좌)을 기준으로 진행합니다.
+
+PRO·ROOKIE에서 인원 단위로 책정된 단가는 1개의 제품 기준이며,
+1개 제품(상품코드)은 오늘의집에서 동일한 상세페이지를 보유하고
+동일 상품코드로 구성된 경우를 의미합니다.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span><span class="faq-q-label">Q.</span>오늘의집 미입점 제품도 진행 가능한가요?</span>
+              <svg class="faq-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><span class="faq-a-label">A.</span>오감리뷰는 오늘의집 내에서 판매 중인 제품만 가능합니다.
+
+오늘의집 제품 입점은 아래 파트너센터를 통해 진행할 수 있습니다.
+• 오늘의집 파트너센터 입점 안내:
+  https://www.partnerbucketplace.com/hc/ko/articles/19259629646361-오늘의집-입점안내
+
+빠른 입점 승인을 원하신다면, 파트너센터 및 담당 MD에게
+'오감리뷰 진행 건'으로 커뮤니케이션을 진행해 주시길 권장드립니다.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span><span class="faq-q-label">Q.</span>'제품 주력 포인트'에는 어떤 내용을 작성해야 하나요?</span>
+              <svg class="faq-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><span class="faq-a-label">A.</span>작성해 주시는 내용을 바탕으로 크리에이터 분들께 리뷰 가이드라인을 안내드리고 있습니다.
+
+• 제품명/브랜드 표기 주의사항
+• 참고할 만한 주요 상품 특성 3가지 이하
+
+주요 해시태그는 5개 이내로 반영됩니다.
+(#오감리뷰 해시태그와 광고 표기 문안은 필수로 포함됩니다.)
+
+오감리뷰는 크리에이터의 자유로운 리뷰를 지향하고 있어,
+제품 주력 포인트 100% 반영은 어려울 수 있는 점 참고 부탁드립니다.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span><span class="faq-q-label">Q.</span>제품 제공이 아닌, 대여/회수로 진행이 가능한가요?</span>
+              <svg class="faq-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><span class="faq-a-label">A.</span>오감리뷰는 선정된 크리에이터에게 무상으로 제품을 제공하는 조건으로 진행됩니다.
+
+배송·설치 등의 제반 비용은 파트너사에서 일체 부담해야 하오니 참고 부탁드립니다.
+
+대여 및 회수 조건으로는 진행이 불가합니다.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span><span class="faq-q-label">Q.</span>리뷰 콘텐츠의 원본 이미지는 어디서 다운로드 받을 수 있나요?</span>
+              <svg class="faq-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><span class="faq-a-label">A.</span>오감리뷰 어드민 내 [리뷰 콘텐츠 내역] 메뉴에서 진행 회차별로 리뷰 콘텐츠를 확인할 수 있습니다.
+해당 리뷰 콘텐츠의 URL을 클릭하여 캡처·다운로드해 주시기 바랍니다.</div>
+          </div>
+
+        </div>
+
+        <!-- 프리 라이선스 -->
+        <div class="faq-list" id="faq-license">
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span><span class="faq-q-label">Q.</span>게재 보고서 이외의 추가 리뷰 콘텐츠를 활용하고 싶을 때는 크리에이터에게 직접 컨택해야 하나요?</span>
+              <svg class="faq-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><span class="faq-a-label">A.</span>아래 3가지의 경우, 반드시 크리에이터의 별도 동의를 받아야 합니다.
+라이선스 활용 희망 시 오감리뷰 메일을 통해 문의 부탁드립니다.
+
+1. 게재 보고서 내의 링크 외에 크리에이터가 자율적으로 업로드한 이미지·영상의 활용
+2. 특정 얼굴·신체가 노출된 이미지·영상을 활용하고 싶은 경우
+3. 오프라인에서 이미지를 활용하는 경우
+
+※ 오감리뷰와 사전 협의가 이루어지지 않은 경우, 크리에이터 대상 개별 컨택은 원칙상 불가합니다.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span><span class="faq-q-label">Q.</span>라이선스 활용 기한이 있나요?</span>
+              <svg class="faq-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><span class="faq-a-label">A.</span>오감리뷰의 라이선스는 별도의 활용 기한 제한 없이 지속 사용 가능합니다.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span><span class="faq-q-label">Q.</span>라이선스 활용 절차가 어떻게 되나요?</span>
+              <svg class="faq-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><span class="faq-a-label">A.</span>1. <strong>'라이선스 활용 조사'</strong> 제출하기
+   • ROOKIE 라이선스 활용 신청서: https://docs.google.com/forms/d/e/1FAIpQLSd82F96KIcmNqvGXpcRZLCyOO-LmjmXpk6edudQhmdCIEKtqQ/viewform
+   • PRO 라이선스 활용 신청서: https://docs.google.com/forms/d/e/1FAIpQLSeI8K-E1EhFSU14SNXsNxl8zwfwL1DcCT_PPSX1mucdeZq3mA/viewform
+
+2. 편집(가공) 예정인 경우: 오감리뷰 메일로 전달받은 [라이선스 가공 요청서] 작성 후 컨펌 확인
+   (편집 없이 원본 활용 시 3번으로)
+
+3. 라이선스 활용 콘텐츠 발행 후, 오감리뷰 메일로 최종 공유</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span><span class="faq-q-label">Q.</span>라이선스 활용 희망 시, 별도로 신청하거나 구매해야 하나요?</span>
+              <svg class="faq-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><span class="faq-a-label">A.</span>오감리뷰에서는 생산된 리뷰 내 이미지 콘텐츠에 대한 프리 라이선스가 제공됩니다.
+
+<strong>2차 라이선스 활용 정책</strong>
+• 제공 콘텐츠: 오감리뷰로 생산된 이미지 &amp; 텍스트 기준
+• 기본 정책: 추가 비용 없이 콘텐츠 활용 허용
+• 출처 필수 기재 (미표기 시 법적 이슈 발생)
+  예) "오늘의집 000님의 오감리뷰", "오늘의집 000님의 리뷰"
+• 타 커머스 및 채널 사용 불가
+• 활용 범위: 오늘의집 제품 상품페이지, 파트너사 자사몰/공식 SNS
+• 자사몰 내 리뷰 페이지 게재는 불가, 그 외 지면 활용 시 오늘의집 사전 협의 필요
+• 오프라인 제작물 활용 시 크리에이터 사전 동의 필요
+
+라이선스 활용을 희망하시는 경우 반드시 '라이선스 활용 조사'를 제출해 주세요.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span><span class="faq-q-label">Q.</span>라이선스 활용 후, 관리는 어떻게 이루어지나요?</span>
+              <svg class="faq-chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><span class="faq-a-label">A.</span>라이선스 활용 콘텐츠 발행 후, 오감리뷰 측에서 승인된 라이선스를 통해 발행된 콘텐츠를 지속적으로 관리합니다.
+
+지식재산권 보호 및 관리를 강화하기 위해 최종 발행된 콘텐츠 제출을 요청드리고 있습니다.
+오감리뷰 메일로 최종 발행 콘텐츠를 공유해 주세요.</div>
+          </div>
+
+        </div>
+      </div>
+
+      <aside class="section-toc">
+        <div class="toc-label">FAQ</div>
+        <a class="toc-item" href="#" onclick="document.querySelector('[data-tab=\'faq-ad\']').click();return false;">광고 안내</a>
+        <a class="toc-item" href="#" onclick="document.querySelector('[data-tab=\'faq-apply\']').click();return false;">체험단 신청</a>
+        <a class="toc-item" href="#" onclick="document.querySelector('[data-tab=\'faq-license\']').click();return false;">프리 라이선스</a>
+      </aside>
+    </section>
+
+  </main>
+</div>
+
+<!-- ─── Lightbox ─── -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()" title="닫기">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="" onclick="event.stopPropagation()">
+</div>
+
+<!-- ─── Top Button ─── -->
+<button class="top-btn" id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="맨 위로">
+  <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
