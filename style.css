@@ -1273,6 +1273,8 @@ h1[id], h2[id] {
 /* ─── Process Flow ─── */
 .process-flow { margin: 24px 0; }
 
+.process-step-content { flex: 1; min-width: 0; }
+
 .process-step {
   display: flex;
   gap: 16px;
@@ -1790,6 +1792,39 @@ h1[id], h2[id] {
   transition: background 0.15s;
 }
 .lightbox-close:hover { background: rgba(255,255,255,0.3); }
+.gallery-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+  z-index: 1001;
+}
+.gallery-nav:hover { background: rgba(255,255,255,0.35); }
+.gallery-prev { left: 20px; }
+.gallery-next { right: 20px; }
+.gallery-counter {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-size: 13px;
+  font-family: 'Pretendard', sans-serif;
+  padding: 4px 14px;
+  border-radius: 20px;
+  pointer-events: none;
+}
 
 /* ─── Top Button ─── */
 .top-btn {
@@ -1817,6 +1852,8 @@ h1[id], h2[id] {
 .top-btn:hover { background: var(--brand-dark); }
 
 /* ─── 2차 라이선스 페이지 ─── */
+.license-hero-body { flex: 1; min-width: 0; }
+
 .license-hero {
   display: flex;
   align-items: flex-start;
@@ -1986,3 +2023,404 @@ h1[id], h2[id] {
   .header-apply { display: none; }
   .top-btn { bottom: 20px; right: 16px; }
 }
+
+/* ─── Exposure Modal ─── */
+.exposure-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+.exposure-modal.open { display: flex; }
+.exposure-modal-inner {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px 24px;
+  max-width: 560px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+}
+.exposure-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  padding: 4px;
+  line-height: 1;
+  border-radius: 4px;
+  transition: color .15s, background .15s;
+}
+.exposure-modal-close:hover { color: #111; background: #f3f4f6; }
+
+/* ─── Instagram Card ─── */
+.insta-card {
+  border: 1px solid #DBDBDB;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  max-width: 380px;
+  margin: 0 auto;
+  width: 100%;
+  font-family: -apple-system, 'Pretendard', sans-serif;
+}
+.insta-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+}
+.insta-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+  padding: 2px;
+  flex-shrink: 0;
+}
+.insta-avatar-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #fff;
+  padding: 2px;
+  overflow: hidden;
+}
+.insta-avatar-inner img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #E5E7EB;
+  cursor: default !important;
+}
+.insta-user-info { flex: 1; }
+.insta-username { font-size: 13px; font-weight: 700; color: #111; line-height: 1.2; }
+.insta-subtitle { font-size: 11px; color: #8e8e8e; margin-top: 1px; }
+.insta-more { color: #111; font-size: 18px; line-height: 1; padding: 0 4px; }
+.insta-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  background: #F3F4F6;
+  cursor: zoom-in;
+}
+.insta-dots {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 0 2px;
+}
+.insta-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #C4C4C4;
+}
+.insta-dot.active { background: #1496F5; }
+.insta-actions {
+  display: flex;
+  align-items: center;
+  padding: 8px 14px 4px;
+  gap: 14px;
+}
+.insta-action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  color: #111;
+  transition: opacity .15s;
+}
+.insta-action-btn:hover { opacity: 0.55; }
+.insta-bookmark { margin-left: auto; }
+.insta-likes { padding: 0 14px 4px; font-size: 13px; font-weight: 700; color: #111; }
+.insta-caption {
+  padding: 0 14px 6px;
+  font-size: 13px;
+  color: #111;
+  line-height: 1.5;
+}
+.insta-caption strong { font-weight: 700; }
+.insta-tag { color: #1496F5; }
+.insta-date { padding: 0 14px 12px; font-size: 11px; color: #8e8e8e; }
+
+/* 콘텐츠 이미지 줌인 커서 */
+main img:not(.review-photo) { cursor: zoom-in; }
+
+/* ─── Review Cards (ROOKIE 콘텐츠 예시) ─── */
+.review-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.review-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: box-shadow .2s, border-color .2s;
+}
+.review-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,.08);
+  border-color: #D1D5DB;
+}
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.review-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #E0E7FF, #C7D2FE);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: #4338CA;
+  flex-shrink: 0;
+}
+.review-user-info { flex: 1; min-width: 0; }
+.review-username {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.review-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 3px;
+  flex-wrap: wrap;
+}
+.review-stars {
+  color: #F59E0B;
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.review-date {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+.review-badge {
+  font-size: 10px;
+  background: #F3F4F6;
+  color: #6B7280;
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-weight: 500;
+}
+.review-photos {
+  display: flex;
+  gap: 6px;
+}
+.review-photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  background: #F3F4F6;
+  cursor: zoom-in;
+  transition: opacity .15s;
+}
+.review-photo:hover { opacity: 0.85; }
+.review-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #1D4ED8;
+  background: #EFF6FF;
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin-bottom: 6px;
+}
+.review-text {
+  font-size: 12.5px;
+  color: var(--text-primary);
+  line-height: 1.65;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+@media (max-width: 640px) {
+  .review-grid { grid-template-columns: 1fr; }
+}
+
+/* ─── Reel Card ─── */
+.reel-card {
+  border: 1px solid #DBDBDB;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  max-width: 380px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: -apple-system, 'Pretendard', sans-serif;
+}
+.reel-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.reel-avatar-wrap {
+  width: 34px; height: 34px;
+  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  border-radius: 50%;
+  padding: 2px;
+  flex-shrink: 0;
+}
+.reel-avatar-inner {
+  width: 100%; height: 100%;
+  background: #fff;
+  border-radius: 50%;
+  padding: 2px;
+  overflow: hidden;
+}
+.reel-avatar-inner img {
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.reel-user-info { flex: 1; }
+.reel-username { font-size: 13px; font-weight: 700; color: #111; }
+.reel-subtitle { font-size: 11px; color: #8e8e8e; }
+.reel-more { font-size: 18px; color: #8e8e8e; letter-spacing: 1px; cursor: pointer; }
+.reel-media {
+  position: relative;
+  width: 100%;
+  background: #111;
+  overflow: hidden;
+}
+.reel-media > img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+.reel-badge {
+  position: absolute;
+  top: 10px; left: 10px;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+  border-radius: 20px;
+  padding: 4px 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+}
+.reel-play-btn {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 52px; height: 52px;
+  background: rgba(255,255,255,0.18);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+  border: 2px solid rgba(255,255,255,0.5);
+}
+.reel-side-actions {
+  position: absolute;
+  right: 10px; bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.reel-side-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  color: #fff;
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.4));
+  font-size: 10px;
+  font-weight: 500;
+}
+.reel-caption-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 44px;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+  padding: 32px 12px 12px;
+}
+.reel-caption-user {
+  font-size: 12px; font-weight: 700; color: #fff; margin-bottom: 3px;
+}
+.reel-caption-text {
+  font-size: 11px; color: rgba(255,255,255,0.88); line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.reel-music-bar {
+  display: flex; align-items: center; gap: 5px;
+  margin-top: 6px; font-size: 10px; color: rgba(255,255,255,0.7);
+}
+.reel-actions-bar {
+  display: flex;
+  align-items: center;
+  padding: 8px 14px;
+  gap: 14px;
+  border-top: 1px solid #f0f0f0;
+}
+.reel-action-btn {
+  display: flex; align-items: center; gap: 5px;
+  background: none; border: none; cursor: pointer;
+  color: #444; padding: 0; font-size: 12px;
+  font-family: inherit;
+}
+.reel-platform-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px 10px;
+  border-top: 1px solid #f5f5f5;
+  background: #fafafa;
+}
+.reel-platform-label { font-size: 10px; color: #9ca3af; }
+.reel-platform-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 3px 9px 3px 6px;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #374151;
+}
+.chip-dot { width: 7px; height: 7px; border-radius: 50%; }
+.chip-dot-blue { background: #1496F5; }
+.chip-dot-ig { background: linear-gradient(135deg, #833ab4, #fd1d1d); }
