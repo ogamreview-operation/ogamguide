@@ -78,7 +78,7 @@ const searchData = [
   { title: '효과적인 활용 가이드', desc: '일정 확인 → 제품 등록 → 기획전 연계 활용 방법', section: 'tips', anchor: 'tips-guide', tags: '활용 가이드 팁 tip' },
   // 진행 프로세스
   { title: '진행 프로세스', desc: '오감리뷰 전체 진행 단계 흐름도', section: 'process', anchor: 'process-flow', tags: '프로세스 진행 흐름' },
-  { title: '세부 일정 안내', desc: '3월 / 4월 / 5월 1회차 상세 일정표', section: 'process', anchor: 'process-schedule', tags: '일정 달력 스케줄' },
+  { title: '세부 일정 안내', desc: '5월 / 6월 / 7월 1회차 상세 일정표', section: 'process', anchor: 'process-schedule', tags: '일정 달력 스케줄' },
   { title: '신청 방법', desc: '오로라 어드민 → 광고관리 → 오감리뷰 체험단 신청', section: 'process', anchor: 'process-apply', tags: '신청 방법 등록' },
   { title: '게재 보고서', desc: '리뷰 마감일 이후 7영업일 내 전달', section: 'process', anchor: 'process-apply', tags: '보고서 게재' },
   // 콘텐츠 예시
